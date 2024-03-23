@@ -5,7 +5,7 @@ import { useMediaQuery } from "@react-hook/media-query";
 import Image from "next/image";
 import Link from "next/link";
 
-const Header = () => {
+export default function Header  () {
   const [isOpen, setisOpen] = useState(false);
 
   const handleOpen = () => {
@@ -148,4 +148,3 @@ const Header = () => {
   );
 };
 
-export default Header;
