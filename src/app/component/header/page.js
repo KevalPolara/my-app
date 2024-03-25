@@ -7,10 +7,18 @@ import Link from "next/link";
 
 export default function Header  () {
   const [isOpen, setisOpen] = useState(false);
+  const [accordion, isaccordion] = useState(false);
+
+
+  console.log("isOpen" , isOpen);
 
   const handleOpen = () => {
     setisOpen(!isOpen);
   };
+
+  const handleAccordion = () => {
+    isaccordion(!accordion);
+  }
 
   return (
     <>
@@ -39,7 +47,7 @@ export default function Header  () {
               </li>
 
               <div>
-                <ul className="lg:flex hidden">
+                <ul class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                   <li>
                     <Link
                       href=""
@@ -119,7 +127,7 @@ export default function Header  () {
                 </li>
 
                 <li className="pl-[15px]">
-                  {isOpen === true ? (
+                  {isOpen === false ? (
                     <Image
                       src="/menuicon.png"
                       alt="Giving Society Image"
@@ -144,6 +152,102 @@ export default function Header  () {
           </nav>
         </div>
       </header>
+
+      {
+              isOpen === true ? 
+              <div className="lg:hidden block px-[20px] py-[25px] leading-[43px]">
+                <ul class="lg:hidden block justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                  <li className="ml-[26px]">
+                    <Link
+                      href=""
+                      className="lg:mr-[6px] xl:mr-[25px] text-[18px] font-[500] text-[#1A1A28] max-w-[115px] max-h-[44px]"
+                    >
+                      Case Studies
+                    </Link>
+                  </li>
+                  <li className="mt-[12px] ml-[26px]">
+                    <Link
+                      href=""
+                      className="lg:mr-[6px] xl:mr-[25px] text-[18px] font-[500] text-[#1A1A28] mt-[6px] max-w-[115px] max-h-[44px]"
+                    >
+                      Services
+                    </Link>
+                  </li>
+                  <li className="mt-[12px] ml-[26px]">
+                    <Link
+                      href=""
+                      className="lg:mr-[6px] xl:mr-[25px] text-[18px] font-[500] text-[#1A1A28]"
+                    >
+                      About
+                    </Link>
+                  </li>
+                  <li className="mt-[12px] ml-[26px]">
+                    <Link
+                      href=""
+                      className="lg:mr-[6px] xl:mr-[25px] text-[18px] font-[500] text-[#1A1A28]"
+                    >
+                      Learn
+                    </Link>
+                  </li>
+
+                  <div className="flex justify-between items-baseline bg-gray-300 rounded-md">
+                  <li className="ml-[26px]">
+                    <Link
+                      href=""
+                      className="lg:mr-[6px] xl:mr-[25px] text-[18px] font-[500] text-[#1A1A28]"
+                    >
+                      Explore
+                    </Link>
+                  </li>
+                  <button onClick={handleAccordion}>
+                  <Image
+                     src="/chevrolentbottom.png"
+                     alt=""
+                     height={15}
+                     width={15}
+                     className="mr-[17px] text-black"
+                  />
+                  </button>
+                  </div>
+
+                  {
+                    accordion === true ?
+                    <div className="pl-[50px] leading-[43px]">
+                      <h6 className="text-[#1A1A28] text-[18px] font-[500]">Lorem Ipsum</h6>
+                      <h6 className="text-[#1A1A28] text-[18px] font-[500]">Lorem Ipsum</h6>
+                      <h6 className="text-[#1A1A28] text-[18px] font-[500]">Lorem Ipsum</h6>
+                      </div>
+                    : null
+                  }
+
+                  <div className="flex justify-between mt-[43px]">
+                  <Image
+                    src="/Group 80396.png"
+                    alt="Giving Society Image"
+                    height={46.46}
+                    width={50}
+                    className="sm:hidden block"
+                  />
+
+                  <h6 className="text-[#1A1A28] text-[18px] font-[500]">EN</h6>
+                  </div>
+
+                  
+
+                  <button className="border-[1.5px] mt-[68px] border-[#7656E7] w-full rounded-[10px] text-[#8D6DFE]">
+                     Log In
+                    </button>
+
+                    <button className="bg-[#8D6DFE] mt-[15px] rounded-[10px] w-full text-[#FFFFFF]">
+                      Register
+                    </button>
+
+                
+                </ul>
+              </div>
+              
+              : null
+            }
     </>
   );
 };

@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Ourteam = () => {
   return (
-    <section className="max-width-[1240px]">
-      <div className="bg-[#F5F2FC] lg:px-[100px] md:px-[50px] px-[20px] py-[110px]">
+    <section className="">
+      <div className="max-width-[1240px] px-[20px] bg-[#F5F2FC] py-[110px]">
         <div className="max-w-[1440px] mx-auto">
           <h2 className="sm:text-[64px] text-[50px] sm:text-left text-center flex justify-center items-center font-[600] text-[#171326]">
             <p className="flex items-center">
