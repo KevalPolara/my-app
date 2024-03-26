@@ -4,8 +4,9 @@ import Image from "next/image";
 const Consumer = () => {
   return (
     <section>
-      <div className="flex flex-wrap max-w-[1240px] mx-auto justify-between sm:py-[151px] py-[70px]">
-        <div>
+      <div className="max-w-[1240px] mx-auto"> 
+      <div className="flex flex-wrap mx-auto justify-between sm:py-[151px] py-[70px]">
+        <div className="mx-auto">
           <Image
             src="/formkit_people.png"
             alt="This is a HandFigure Releted Image"
@@ -25,7 +26,7 @@ const Consumer = () => {
           </p>
         </div>
 
-        <div className="sm:mt-0 mt-[40px]">
+        <div className="sm:mt-0 mt-[40px] mx-auto">
           <Image
             src="/solar_user-heart-linear.png"
             alt="This is a HandFigure Releted Image"
@@ -45,7 +46,7 @@ const Consumer = () => {
           </p>
         </div>
 
-        <div className="xl:mt-0 mt-[40px] sm:mx-auto xl:mx-0">
+        <div className="xl:mt-0 mt-[40px] mx-auto">
           <Image
             src="/icon-park-outline_degree-hat.png"
             alt="This is a HandFigure Releted Image"
@@ -64,6 +65,7 @@ const Consumer = () => {
             difference.
           </p>
         </div>
+      </div>
       </div>
     </section>
   );

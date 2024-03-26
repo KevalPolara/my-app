@@ -4,7 +4,8 @@ import Image from "next/image";
 const Joiningsociety = () => {
   return (
     <section>
-      <div className="flex flex-wrap justify-between sm:px-[98px] px-[30px] pt-[151px] pb-[80px]">
+      <div className="max-w-[1240px]">
+      <div className="flex flex-wrap justify-between pt-[151px] pb-[80px]">
         <div className="lg:mx-0 mx-auto">
           <Image
             src="/laptop.png"
@@ -67,6 +68,7 @@ const Joiningsociety = () => {
             height={322}
             width={187}
           />
+        </div>
         </div>
       </div>
     </section>

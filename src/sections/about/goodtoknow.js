@@ -18,7 +18,7 @@ const Goodtoknow = () => {
           </p>
         </h2>
 
-        <div className="flex flex-wrap gap-y-[20px] lg:justify-between justify-center sm:px-[20px] px-[10px] sm:py-[76px] py-[10px]">
+        <div className="flex flex-wrap gap-y-[20px] lg:justify-between justify-center sm:py-[76px] py-[10px]">
           <div className="border-[1.5px] rounded-[15px] border-[#BFBFBF]">
             <div>
               <Image
